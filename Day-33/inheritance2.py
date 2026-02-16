@@ -72,8 +72,9 @@ class Updated_Bank(Bank):
         print("Cashier Name",cls.CASHIER)
     
     @classmethod
-    def changecls(cls,cname):
+    def changecashier(cls,cname):
         cls.CASHIER=cname
+    
 
     
 
