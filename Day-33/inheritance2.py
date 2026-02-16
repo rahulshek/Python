@@ -48,10 +48,6 @@ class Bank:
 class Updated_Bank(Bank):
     CASHIER="Mr Dinga"
     def __init__(self,name,monumber,email,accountno,adhaar):
-        #? self.NAME=name
-        #? self.MONUMBER=monumber
-        #? self.EMAIL=email
-        #? self.ACCOUNTNO=accountno
         super().__init__(name,monumber,email,accountno)
         self.ADHAAR=adhaar
 
