@@ -19,7 +19,7 @@
 # c2=B()
 # c3=A()
 
-#~----------------------------------------------------------------------------------------------------------------------------
+#~-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #& Create a class resume1 which consists of name , percentage and school name as object members and then create another class resume2 which inherit the properties from resume1 and along with that have 12th percentage and college name as object members and then create another class resume3 which inherit's from resume2 and consist of deg_college and deg_percentage as object members
 
@@ -55,5 +55,4 @@ c2=resume3("Preksha",90,"Bright",80,"Indus","Btech",90)
 c1.display()
 c2.display()
 
-#~---------------------------------------------------------------------------------------------------------------------------
-
+#~-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
