@@ -31,6 +31,8 @@ class resume1:
     def display(self):
         a=self.NAME,self.PERCENTAGE,self.SCHOOLNAME
         return print(a)
+    def changepercentage(self,percentage):
+        self.PERCENTAGE=percentage
 
 class resume2(resume1):
     def __init__(self,name,percentage,schoolname,percentage12,collegename):
@@ -40,7 +42,9 @@ class resume2(resume1):
     def display(self):
         b=self.NAME,self.PERCENTAGE,self.SCHOOLNAME,self.PERCENTAGE12,self.COLLEGENAME
         return print(b)
-
+    def changepercentage12(self,percentage12):
+        self.PERCENTAGE12=percentage12
+        
 class resume3(resume2):
     def __init__(self,name,percentage,schoolname,percentage12,collegename,deg_college,deg_percentage):
         super().__init__(name,percentage,schoolname,percentage12,collegename)
