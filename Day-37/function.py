@@ -53,13 +53,13 @@
 #*--------------------------------------------------------------------------------------------#
 
 
-def info(name, mobnumber , mailid, alternate_number=None):
-	print(name)
-	print(mobnumber)
-	print(mailid)
-	print(alternate_number)
+# def info(name, mobnumber , mailid, alternate_number=None):
+# 	print(name)
+# 	print(mobnumber)
+# 	print(mailid)
+# 	print(alternate_number)
 
-info(name="Rahul",mobnumber=1234567890,mailid="rahul@gmail.com")
+# info(name="Rahul",mobnumber=1234567890,mailid="rahul@gmail.com")
 
 
 #!output
@@ -67,3 +67,14 @@ info(name="Rahul",mobnumber=1234567890,mailid="rahul@gmail.com")
 # 1234567890
 # rahul@gmail.com
 # None
+
+
+#*--------------------------------------------------------------------------------------------#
+def pack(**d):
+	print(type(d))
+	print(d)
+pack(a=10,b='20')
+
+#!output
+# <class 'dict'>
+# {'a': 10, 'b': '20'}
