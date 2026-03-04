@@ -21,17 +21,17 @@
 # print(out)
 
 
-def extraxt(a,out=""):
-    s=len(a)-1
-    if s<=0:
-        return out
-    if a[s] in "aeiouAEIO":
-        out=a[s]+out
+# def extraxt(a,out=""):
+#     s=len(a)-1
+#     if s<=0:
+#         return out
+#     if a[s] in "aeiouAEIO":
+#         out=a[s]+out
     
-    return extraxt(a[:-1], out)
+#     return extraxt(a[:-1], out)
 
 
-print(extraxt('Hello World'))
+# print(extraxt('Hello World'))
     
     
 
