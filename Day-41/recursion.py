@@ -115,15 +115,15 @@ a = [0, 1, 0, 3, 12]
 #        print("Balance number")
 #    else:
 #        print("Not a balance number")
-#*-----------------------------------------------------------------------------------------------
+#*------------------------------------------------------------------------------------------------
 
 
 #?WAP to print prime number upto n term
-n=int(input("Enter the range tull you want prime number : "))
+# n=int(input("Enter the range tull you want prime number : "))
 
-for i in range(2,n+1): # 2 3 4 5 6 7 8
-    for j in range(2,(i//2)+1): 
-        if i%j==0:
-            break
-    else:
-        print(i)
+# for i in range(2,n+1): # 2 3 4 5 6 7 8
+#     for j in range(2,(i//2)+1): 
+#         if i%j==0:
+#             break
+#     else:
+#         print(i)
