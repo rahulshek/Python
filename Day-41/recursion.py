@@ -127,3 +127,11 @@ a = [0, 1, 0, 3, 12]
 #             break
 #     else:
 #         print(i)
+#*------------------------------------------------------------------------------------------------
+# #? WAP to print the factorial of a number
+# n=int(input("Enter a number to find the factorial : "))
+# fact=1
+# for i in range(1,n+1):
+#     fact=fact*i
+# print(fact)
+#*------------------------------------------------------------------------------------------------
