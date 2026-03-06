@@ -64,5 +64,7 @@
 
 #? Program to extract all the collection values present in a list which has even length
 l = [10,2.3,'sakshi',[10,20,30],(7,8),{1,2,3,4}]
+extract=lambda x: type(x) in [list,str,tuple,set] and len(x)%2==0
+print(list(filter(extract,l)))
 
-print(list(filter(lambda x: len(str(x))%2==0,l)))
+# print(list(filter(lambda x: len(str(x))%2==0,l)))
