@@ -79,9 +79,9 @@ marks=[85,72,90,67,88,76,95,60,82,78]
 # B → 70 ≤ Marks < 85
 # C → Marks < 70 
 
-gradeA=[i for i,j in zip(students,marks) if j>=85]
-gradeB=[i for i,j in zip(students,marks) if j<85 and j>=70]
-gradeC=[i for i,j in zip(students,marks) if j<70]
-print(gradeA)
-print(gradeB)
-print(gradeC)
+# gradeA=[i for i,j in zip(students,marks) if j>=85]
+# gradeB=[i for i,j in zip(students,marks) if j<85 and j>=70]
+# gradeC=[i for i,j in zip(students,marks) if j<70]
+# print(gradeA)
+# print(gradeB)
+# print(gradeC)
