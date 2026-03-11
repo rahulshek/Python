@@ -1,0 +1,4 @@
+Dynamically Typed Language
+simple syntax
+Easy to learn
+platform independent
