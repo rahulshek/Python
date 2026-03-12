@@ -12,10 +12,20 @@ import csv
 
 #create a function to add data to csv file
 
-def add_data(son,daughter,total):
-    with open('data.csv', 'a', newline='') as babitaji:
-        jetha = csv.writer(babitaji)
-        jetha.writerow([son,daughter,total])
+# def add_data(son,daughter,total):
+#     with open('data.csv', 'a', newline='') as babitaji:
+#         jetha = csv.writer(babitaji)
+#         jetha.writerow([son,daughter,total])
 
-# add_data('Tapu3', 'Sonu3', 6)
-add_data('Tapu4', 'Sonu4', 6)
+# # add_data('Tapu3', 'Sonu3', 6)
+# add_data('Tapu4', 'Sonu4', 6)
+
+#*----------------------------------------------------------
+
+with open('data.csv', 'r') as babitaji:
+    jetha = csv.reader(babitaji)
+    chachaji=list(jetha)
+    madhvi=chachaji[1::]
+    print(madhvi)
+
+#*----------------------------------------------------------
