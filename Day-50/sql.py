@@ -6,22 +6,22 @@ def table_creation():
     data = sqlite3.connect('TESTYANTRA.db')
     cursor = data.cursor()
 
-    #* --------------MAIN EMPLOYEE TABLE-----------------
+    # * --------------MAIN EMPLOYEE TABLE-----------------
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS EMPLOYEE(EMPID INTEGER PRIMARY KEY AUTOINCREMENT , ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT)
     ''')
 
-    #* --------------SALES DEPARTMENT-----------------
+    # * --------------SALES DEPARTMENT-----------------
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS SALES( EMPID INTEGER, ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT,MANAGER TEXT)
     ''')
 
-    #* --------------HR DEPARTMENT--------------------
+    # * --------------HR DEPARTMENT--------------------
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS HR( EMPID INTEGER, ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT, MANAGER TEXT)
     ''')
 
-    #* --------------IT DEPARTMENT--------------------
+    # * --------------IT DEPARTMENT--------------------
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS IT( EMPID INTEGER, ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT, MANAGER TEXT)
     ''')
@@ -33,7 +33,7 @@ def table_creation():
 table_creation()
 
 
-#* -------------------Insert Data-----------------
+# * -------------------Insert Data-----------------
 
 def insert_data(obj):
     data = sqlite3.connect('TESTYANTRA.db')
@@ -66,7 +66,7 @@ def insert_data(obj):
     data.close()
 
 
-#* -------------------Display Data-----------------
+# * -------------------Display Data-----------------
 
 def display_all():
     data = sqlite3.connect('TESTYANTRA.db')
@@ -81,7 +81,7 @@ def display_all():
     data.close()
 
 
-#* -------------------Search Employee-----------------
+# * -------------------Search Employee-----------------
 
 def search_employee(empid):
     data = sqlite3.connect('TESTYANTRA.db')
@@ -98,7 +98,7 @@ def search_employee(empid):
     data.close()
 
 
-#* -------------------Update Salary-----------------
+# * -------------------Update Salary-----------------
 
 def update_salary(empid, new_salary):
     data = sqlite3.connect('TESTYANTRA.db')
@@ -113,7 +113,7 @@ def update_salary(empid, new_salary):
     print("Salary Updated Successfully")
 
 
-#* -------------------Delete Employee-----------------
+# * -------------------Delete Employee-----------------
 
 def delete_employee(empid):
     data = sqlite3.connect('TESTYANTRA.db')
@@ -127,7 +127,7 @@ def delete_employee(empid):
     print("Employee Deleted Successfully")
 
 
-#* -------------------Department Employees-----------------
+# * -------------------Department Employees-----------------
 
 def department_employee(dept):
     data = sqlite3.connect('TESTYANTRA.db')
@@ -141,8 +141,28 @@ def department_employee(dept):
 
     data.close()
 
+# * -------------------Department Employees-----------------
 
-#* -------------------Class-----------------
+
+def department_employee(dept):
+    data = sqlite3.connect('TESTYANTRA.db')
+    cursor = data.cursor()
+
+    cursor.execute(f"SELECT * FROM {dept}")
+    records = cursor.fetchall()
+
+    for i in records:
+        print(i)
+
+    data.close()
+
+# *--------------------Login-----------------
+
+
+def login():
+    pass
+# * -------------------Class-----------------
+
 
 class Bank:
 
@@ -163,7 +183,7 @@ class Bank:
         print('DATA INSERTED SUCCESSFULLY')
 
 
-#* -------------------Menu-----------------
+# * -------------------Menu-----------------
 
 while True:
     print("""
@@ -172,7 +192,8 @@ while True:
     3 Search Employee
     4 Update Salary
     5 Delete Employee
-    6 Exit
+    6 Department Employees
+    7 Exit
     """)
 
     choice = int(input("Enter Choice: "))
@@ -201,4 +222,9 @@ while True:
         delete_employee(empid)
 
     elif choice == 6:
+        dept = input("Enter Department: ")
+        department_employee(dept)
+
+    elif choice == 7:
+        print("Exiting...")
         break
