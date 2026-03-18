@@ -13,7 +13,7 @@ def table_creation():
 
     # * --------------SALES DEPARTMENT-----------------
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS SALES( EMPID INTEGER, ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT,MANAGER TEXT)
+    CREATE TABLE IF NOT EXISTS Sales( EMPID INTEGER, ENAME TEXT, DEPARTMENT TEXT, MOBILENUMBER BIGINT, SALARY INTEGER, JD TEXT,MANAGER TEXT)
     ''')
 
     # * --------------HR DEPARTMENT--------------------
@@ -36,7 +36,7 @@ table_creation()
 # * -------------------Insert Data-----------------
 
 def insert_data(obj):
-    departments = ['HR', 'SALES', 'IT']
+    departments = ['HR', 'Sales', 'IT']
 
     insert_main_employee(obj)
 
@@ -53,7 +53,7 @@ def insert_department_employee(obj, departments):
         table_name = obj.DEPARTMENT.upper()
 
         cursor.execute(f"INSERT INTO {table_name} VALUES(?,?,?,?,?,?,?)", (obj.EMPID,
-            obj.ENAME, obj.DEPARTMENT, obj.MOBNUMBER, obj.SALARY, obj.JD, obj.Manager  ))
+                                                                           obj.ENAME, obj.DEPARTMENT, obj.MOBNUMBER, obj.SALARY, obj.JD, obj.Manager))
 
     else:
         print("INVALID DEPARTMENT")
@@ -78,6 +78,7 @@ def insert_main_employee(obj):
     return obj.EMPID
 
 # * -------------------Display Data-----------------
+
 
 def display_all():
     data = sqlite3.connect('TESTYANTRA.db')
@@ -152,22 +153,45 @@ def department_employee(dept):
 
     data.close()
 
-# * -------------------Department Employees-----------------
+# * -----------------Change-Department-----------------
 
 
-def department_employee(dept):
+def change_department(empid, new_dept):
     data = sqlite3.connect('TESTYANTRA.db')
     cursor = data.cursor()
 
-    cursor.execute(f"SELECT * FROM {dept}")
-    records = cursor.fetchall()
+    cursor.execute("SELECT * FROM EMPLOYEE WHERE EMPID=?", (empid,))
+    record = cursor.fetchone()
 
-    for i in records:
-        print(i)
+    if not record:
+        print("Employee Not Found")
+        data.close()
+        return
 
+    empid, ename, old_dept, mob, sal, jd = record
+
+    departments = ['HR', 'Sales', 'IT']
+    if new_dept not in departments:
+        print("Invalid Department")
+        data.close()
+        return
+
+    cursor.execute(
+        "UPDATE EMPLOYEE SET DEPARTMENT=? WHERE EMPID=?", (new_dept, empid))
+
+    if old_dept in departments:
+        cursor.execute(f"DELETE FROM {old_dept} WHERE EMPID=?", (empid,))
+
+    manager = Bank.Manager[new_dept]
+    cursor.execute(f"INSERT INTO {new_dept} VALUES(?,?,?,?,?,?,?)",
+                   (empid, ename, new_dept, mob, sal, jd, manager))
+
+    data.commit()
     data.close()
 
-# *--------------------Login-----------------
+    print(f"Department changed from {old_dept} to {new_dept} successfully")
+
+# * --------------------Login-----------------
 
 
 # def login():
@@ -201,6 +225,27 @@ class Bank:
 
         print('DATA INSERTED SUCCESSFULLY')
 
+#* ------------------Incentive-----------------
+def incentive(empid, incentive_amount):
+    data = sqlite3.connect('TESTYANTRA.db')
+    cursor = data.cursor()
+
+    cursor.execute("SELECT * FROM EMPLOYEE WHERE EMPID=?", (empid,))
+    record = cursor.fetchone()
+
+    if not record:
+        print("Employee Not Found")
+        data.close()
+        return
+
+    empid, ename, department, mob, salary, jd = record
+
+    new_salary = salary + incentive_amount
+    cursor.execute(
+        "UPDATE EMPLOYEE SET SALARY=? WHERE EMPID=?", (new_salary, empid))
+
+    data.commit()
+    data.close()
 
 # * -------------------Menu-----------------
 
@@ -212,7 +257,9 @@ while True:
     4 Update Salary
     5 Delete Employee
     6 Department Employees
-    7 Exit
+    7 Change Department
+    8 Bonus     
+    9 Exit
     """)
 
     choice = int(input("Enter Choice: "))
@@ -243,7 +290,14 @@ while True:
     elif choice == 6:
         dept = input("Enter Department: ")
         department_employee(dept)
-
     elif choice == 7:
+        empid = int(input("Enter EMPID: "))
+        new_dept = input("Enter New Department: ")
+        change_department(empid, new_dept)
+    elif choice == 8:
+        empid = int(input("Enter EMPID: "))
+        incentive_amount = int(input("Enter Incentive Amount: "))
+        incentive(empid, incentive_amount)
+    elif choice == 9:
         print("Exiting...")
         break
