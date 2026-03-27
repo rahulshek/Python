@@ -1,6 +1,6 @@
 
-#& Input = PyTHONNative
-#&  output =yativePTHONN
+# & Input = PyTHONNative
+# &  output =yativePTHONN
 
 # a="PyTHONNative"
 # lower=""
@@ -13,11 +13,10 @@
 # print(lower+upper)
 
 
+# ^-------------------------------------------------------------
 
-#^-------------------------------------------------------------
-
-#& input=’PyTHon’
-#& output=’PTHyon’
+# & input=’PyTHon’
+# & output=’PTHyon’
 
 # a="PyTHon"
 # lower=""
@@ -30,12 +29,12 @@
 # print(lower+upper)
 
 
-#^-------------------------------------------------------------
+# ^-------------------------------------------------------------
 
-#string="P@#yn26at^&i5v”
-#Chars=8
-#Digits=3
-#Symbol = 4
+# string="P@#yn26at^&i5v”
+# Chars=8
+# Digits=3
+# Symbol = 4
 # a="P@#yn26at^&i5v"
 # chars=0
 # digits=0
@@ -49,7 +48,7 @@
 #         symbol=symbol+1
 # print(chars,digits,symbol)
 
-#^----------------------------------------------------------------
+# ^----------------------------------------------------------------
 
 # Input - ‘my name is yash patel’
 # Output- ‘patel yash is name my’
@@ -62,9 +61,9 @@
 # print(out)
 
 
-#^----------------------------------------------------------------
+# ^----------------------------------------------------------------
 
-#WAP to remove to remove the duplicates from the list 
+# WAP to remove to remove the duplicates from the list
 
 # a=eval(input("Enter a list : "))
 # out=[]
@@ -74,7 +73,7 @@
 # print(out)
 
 
-#^----------------------------------------------------------------
+# ^----------------------------------------------------------------
 
 # Write a program to find largest/second largest number from the list
 
@@ -91,7 +90,7 @@
 # print(largest,second_largest)
 
 
-#^----------------------------------------------------------------
+# ^----------------------------------------------------------------
 
 # s=[10,20,30,25,35,40]
 
@@ -107,7 +106,7 @@
 #         output.append(i)
 # print(output)
 
-#^----------------------------------------------------------------
+# ^----------------------------------------------------------------
 
 #    l=[’S1001’,’S1002’,’S1003’,’S1004’]
 #    h=[’Virat’,’Rohit’,’Black’,’Jhon’]
@@ -123,10 +122,10 @@
 
 # print(output)
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 
-#D = ['red','black','yellow']
-#Output = ['c','red','c','black','c','yellow']
+# D = ['red','black','yellow']
+# Output = ['c','red','c','black','c','yellow']
 
 # d=["red","black","yellow"]
 # out=[]
@@ -135,7 +134,7 @@
 #     out.append(i)
 # print(out)
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 
 #  a=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,23]
 #     output=[2,3,5,7,11,13,17,23]
@@ -153,7 +152,7 @@
 #             out.append(i)
 # print(out)
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 # Write a python program to count how many numbers are     greater than 50 and count how many numbers are odd numbers.
 # Input list: [10, 55, 42, 17, 58]
 # Output: Numbers greater than 50 : 2
@@ -171,7 +170,7 @@
 # print("odd Number :", count1)
 
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 #  Write a python program to find the highest marks and how many students got them.
 # Input: marks = {'Anuradha': 85, 'Baburao': 90, 'Totlashet': 92, 'Shyam': 92}
 # output =Highest Marks =92
@@ -187,7 +186,7 @@
 # print("students =", out)
 
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 # Write a Python program to group numbers by their remainder when divided by 3.
 
 # Input list: [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -203,9 +202,9 @@
 #         out[rem].append(i)
 # print(out)
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 
-## Write a Python program to count how many times each word occurs in a sentence.
+# Write a Python program to count how many times each word occurs in a sentence.
 
 # ## Input Sentence:
 # "this is a test this is simple"
@@ -223,9 +222,9 @@
 #         out[i]+=1
 # print(out)
 
-#^------------------------------------------------------------------------
+# ^------------------------------------------------------------------------
 
-## Write a python program to remove the duplicates from the list and add the non-duplicate values to the second list.
+# Write a python program to remove the duplicates from the list and add the non-duplicate values to the second list.
 
 # ## Input:
 # L1 = [1, 3, 1, 5, 2, 1, 4, 5, 6, 6, 2, 7]
@@ -241,7 +240,7 @@
 # print(out)
 
 
-#^------------------------------------------------------------------------
+# ^------------------------------------------------------------------------
 
 # Write a program to check whether the given number is prime number or not
 
@@ -260,11 +259,11 @@
 #    print("We can't tell whether 1 is prime or not prime")
 
 
-#^----------------------------------------------------------------------
+# ^----------------------------------------------------------------------
 
 # Write a program to check whether given number is Strong /Armstrong number or not
 
-#for armstrong number 
+# for armstrong number
 
 # a=int(input("Enter a number : "))
 # c=str(a)
@@ -305,10 +304,9 @@
 #     print("Strong Number ")
 # else:
 #     print("Not a strong number ")
-        
 
 
-#^-------------------------------------------------------------------
+# ^-------------------------------------------------------------------
 
 # Write a program to program to print prime numbers upto n
 
@@ -321,7 +319,7 @@
 #     else:
 #         print(i)
 
-#^--------------------------------------------------------------------
+# ^--------------------------------------------------------------------
 
 # s=aaabbccddd
 # output=a3b2c2d3
@@ -331,12 +329,10 @@
 # for i in s:
 #     if i not in out:
 #         out+=i+str(s.count(i))
-# print(out)        
- 
+# print(out)
 
 
-        
-#^-----------------------------------------------------------------------
+# ^-----------------------------------------------------------------------
 
 # a=24
 # b=12
@@ -346,7 +342,7 @@
 # print(d+e)
 
 
-#^------------------------------------------------------------------------
+# ^------------------------------------------------------------------------
 
 # Write a program to check whether the given list is a sublist or not
 
@@ -361,7 +357,7 @@
 # else:
 #     print("false")
 
-#^------------------------------------------------------------------------
+# ^------------------------------------------------------------------------
 
 # Write a program to make an simple calculator
 # a="yes"
@@ -382,7 +378,7 @@
 #     a=input("Enter your choice yes/no : ")
 # print("thank You ")
 
-#^------------------------------------------------------------------------
+# ^------------------------------------------------------------------------
 
 # Validate pin it must have 4 digits it should not have 3 continuous numbers eg.123 one digit should not repeat 3 times eg. 333
 
@@ -399,28 +395,24 @@
 #                 break
 #         else:
 #             print("Invalid pin becuse 3 contivvie smae nuber")
-#             break       
+#             break
 # else:
 #     print("Invalid length of pin.")
 
-#^--------------------------------------------------------------------------------
+# ^--------------------------------------------------------------------------------
 
-### Write a program to print the following pattern
+# Write a program to print the following pattern
 
 #           $
 #       $      $
 #    $     $       $
 
 
+# ^-------------------------------------------------------------------
 
 
-
-#^-------------------------------------------------------------------
-
-
-
-#^---------------------------------------------------------------
-#25 Extract and count the highest number of char from string
+# ^---------------------------------------------------------------
+# 25 Extract and count the highest number of char from string
 # a=input("Enter a string : ")
 # b=0
 # c=""
@@ -431,7 +423,7 @@
 #         c=i
 # print(c,"=",b)
 
-#^---------------------------------------------------------------
+# ^---------------------------------------------------------------
 
 
 # c=eval(input("Enter a list  : "))
@@ -440,8 +432,8 @@
 #     if type(c[i])==str:
 #         count+=1
 # print(count)
-        
-#^----------------------------------------------------------------
+
+# ^----------------------------------------------------------------
 
 # l=[’S1001’,’S1002’,’S1003’,’S1004’]
 # h=[’Virat’,’Rohit’,’Black’,’Jhon’]
@@ -453,14 +445,14 @@
 # b=[34,33,80,60]
 
 
-#^-------------------------------------------------------
+# ^-------------------------------------------------------
 
 # out={}
 # for i,j,k in zip(l,h,b):
 #     out[i]={j:k}
 # print([out])
 
-#^-----------------------------------------------------------
+# ^-----------------------------------------------------------
 # a=[1,2,3,4,5,6,7,8,9]
 # out={}
 # for i in a:
@@ -494,7 +486,7 @@
 
 
 # * * * * *
-# * * * * * 
+# * * * * *
 # * * * * *
 # * * * * *
 # * * * * *
@@ -509,7 +501,7 @@
 # for i in range(1,n+1):
 #     for j in range(1,n+1):
 #         if i>=j:
-        
+
 #             print("*",end=" ")
 #     print()
 
@@ -530,13 +522,13 @@
 # print(sum)
 
 
-# Write a program to count no of occurences of a particular character in a string 
+# Write a program to count no of occurences of a particular character in a string
 
 # inp="aaabbbcc"
 # out=''
 # count=1
 # for i in range (len(inp)-1):
-    
+
 #     if inp[i]==inp[i+1]:
 #         count+=1
 #     else:
@@ -550,7 +542,7 @@
 # for i in s:
 #     if i not in out:
 #         out+=i+str(s.count(i))
-# print(out) 
+# print(out)
 
 # temp=121
 # n=temp
@@ -563,3 +555,24 @@
 #     print("yes")
 
 
+# ^----------------------------------------------------------------
+
+data = [{"id": 1, "priority": "high", "execution_time": 20},
+        {"id": 2, "priority": "low", "execution_time": 10},
+        {"id": 3, "priority": "medium", "execution_time": 30},
+        {"id": 4, "priority": "high", "execution_time": 40},
+        {"id": 5, "priority": "high", "execution_time": 30},
+        ]
+
+# output=[1,5,4,3,2]
+high = []
+medium = []
+low = []
+for i in data:
+    if i["priority"] == "high":
+        high.append(i["id"])
+    elif i["priority"] == "medium":
+        medium.append(i["id"])
+    else:
+        low.append(i["id"])
+# print(high+medium+low)
