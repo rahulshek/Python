@@ -126,3 +126,4 @@ for i in inp:
     out[key].append(i)
 print(out.values())
 
+
