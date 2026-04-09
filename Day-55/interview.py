@@ -75,12 +75,46 @@
 # Input:  [1, [2, 3], [4, [5, 6]]]
 # Output: [1, 2, 3, 4, 5, 6]
 
-l=[1, [2, 3], [4, [5, 6]]]
-out=[]
-for i in l:
-    if type(i)==list:
-        for j in i:
-            out.append(j)
-    else:
-        out.append(i)
-print(out)
+# l=[1, [2, 3], [4, [5, 6]]]
+# out=[]
+# for i in l:
+#     if type(i)==list:
+#         for j in i:
+#             out.append(j)
+#     else:
+#         out.append(i)
+# print(out)
+
+#~--------------------------------------------------------------------
+
+# 6. Anagram Checker
+# Input:  "listen", "silent"
+# Output: True
+
+# Input:  "hello", "world"
+# Output: False
+
+# n="listen", "silent"
+# if sorted(n[0]) == sorted(n[1]):
+#     print("True")
+# else:
+#     print("False")
+
+#~----------------------------------------------------------------------
+
+# n=145
+# s=n
+# out=0
+# while n>0:
+#     rem=n%10
+#     fact =1
+#     for i in range (1, rem+1):
+#         fact*=i
+#     sum+=fact
+
+# if sum == s:
+#     print(s," is a Strong Number...")
+# else:
+#     print(s," is not a Strong Number...")
+
+#~--------------------------------------------------------------------
